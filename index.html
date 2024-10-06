@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <dialog id="unsupported-monitor">
+        <p>Sorry, your current monitor is not supported.</p>
+        <button id="close-dialog">OK</button>
+        <button id="more-info">What can I do</button>
+    </dialog>
+    <div id="weather">
+        <div id="temp">--˚C</div>
+        <div id="city"></div>
+    </div>
+
+    <div id="clock">--:--</div>
+    <div id="date"></div>
+    <div id="config-card">
+        <button id="config-close"><img src="icons/close.svg" alt="close"></button>
+        <h2 class="abh2">Configuration</h2>
+        <div class="config-content">
+            <p>The search bar is displayed <input type="checkbox" id="SearchInputVisi"></p>
+           
+            <h3>About</h3>
+            <p>by: adam4056</p>
+            <p><a href="https://github.com/adam4056/Tab-RRR">Official github repo</a></p>
+            <p><a href="terms.html">Terms of use</a></p>
+            <p><a href="license.html">License</a></p>
+        </div>
+    </div>
+    <div id="search-bar">
+        <input type="text" id="search-input" placeholder="Type text..." autocomplete="off">
+        <div class="select-bar">
+            <div class="fill">
+            <button class="select" id="duckduckgo-button">
+                <img src="icons/duckduckgo.svg" alt="DuckDuckGo icon" class="search-icon">
+            </button>
+            <button class="select" id="google-button">
+                <img src="icons/brand-google.svg" alt="Google icon" class="search-icon">
+            </button>
+            <button class="select" id="yahoo-button">
+                <img src="icons/brand-yahoo.svg" alt="Yahoo icon" class="search-icon">
+            </button>
+            <button class="select" id="bing-button">
+                <img src="icons/brand-bing.svg" alt="Bing icon" class="search-icon">
+            </button>
+            <button class="select" id="wikipedia-button">
+                <img src="icons/brand-wikipedia.svg" alt="wikipedia-button icon" class="search-icon">
+            </button>
+           </div>
+           </div>
+    </div>
+    <button id="config-open"><img src="icons/dot.svg" alt="more" width="65px"></button>
+    <div id="author"></div>
+    <script src="script.js"></script>
+</body>
+</html>
