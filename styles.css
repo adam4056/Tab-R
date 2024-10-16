@@ -16,9 +16,8 @@ body {
     transition: background-image 1s ease;
     color: white;
     font-family: 'Rubik', sans-serif;
-    text-align: center;
-    align-items: center;
     margin: 0;
+    text-align: center;
 }
 
 #config-card {
@@ -53,24 +52,6 @@ body {
     font-size: 1.7rem;
 }
 
-#search-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#search-input {
-    background-color: white;
-    border: none;
-    border-radius: 50px;
-    width: 22rem;
-    height: 2.5rem;
-    margin-top: 7rem;
-    outline: none;
-    padding: 0.5rem;
-    font-weight: bold;
-}
-
 .select {
     background-color: transparent;
     border: none;
@@ -82,11 +63,10 @@ body {
     border: none;
     border-color: white;
     background-color: transparent;
-    bottom: 2rem; /* Zajistěte, že toto je správně */
+    bottom: 2rem;
     right: 1rem;
-    z-index: 1000; /* Přidání z-index pro zajištění, že se zobrazuje nad ostatními prvky */
+    z-index: 1000;
 }
-
 
 #config-close {
     position: absolute;
@@ -119,18 +99,40 @@ body {
     transform: scale(1.3);
 }
 
+#search-bar {
+    display: flex;
+    flex-direction: column; /* Ponecháme vertikální uspořádání */
+    align-items: center; /* Vycentrujeme obsah horizontálně */
+    justify-content: center; /* Vycentrujeme obsah i vertikálně */
+    position: absolute; /* Posune search-bar do středu */
+    top: 50%; /* Umístí do středu stránky */
+    left: 50%; /* Umístí do středu stránky */
+    transform: translate(-50%, -50%); /* Přesune do skutečného středu */
+    z-index: 1; /* Zajistí, že se zobrazí nad ostatními prvky */
+}
+
 .select-bar {
-    display: none;
-    align-items: center; /* Vertikální centrování */
-    justify-content: center; /* Horizontální centrování */
+    text-align: center;
+    display: none; /* Bude skryto, dokud nebude potřeba */
     background-color: white;
-    height: 2.5rem;
+    width: 21rem;
     border: none;
-    border-radius: 0 0 30px 30px;
-    width: 22rem;
-    padding: 0.5rem;
+    border-radius: 0px 0px 30px 30px;
+    margin-top: 10px; /* Oddělí select-bar od inputu */
+    box-sizing: border-box;
     margin-top: 0;
 }
+
+#search-input {
+    outline: none;
+    width: 21rem;
+    height: 3.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+}
+
 
 .config-content {
     background-color: rgb(255, 255, 255);
@@ -152,7 +154,7 @@ dialog {
     font-size: 1rem;
     position: fixed;
     box-sizing: border-box;
-    top: 4rem; /* nebo jiná hodnota pro umístění dialogu */
+    top: 4rem;
     margin-bottom: 2rem;
 }
 

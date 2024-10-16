@@ -97,31 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    async function getWeather() {
-        try {
-            const responseLocation = await fetch("https://ipapi.co/json/");
-            const locationData = await responseLocation.json();
-
-            const cityElement = document.getElementById('city');
-            cityElement.innerText = locationData.city;
-
-            const latitude = locationData.latitude;
-            const longitude = locationData.longitude;
-
-            const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m`);
-            const weatherData = await response.json();
-
-            const temperature = weatherData.current.temperature_2m;
-            const units = weatherData.current_units.temperature_2m;
-
-            console.log(temperature, units);
-
-            const tempElement = document.getElementById('temp');
-            tempElement.textContent = `${temperature}${units}`;
-        } catch (error) {
-            console.error('Error fetching weather data:', error);
-        }
-    }
+    
 
     changeBackground()
 
@@ -130,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
     showDate();
     updateClock();
     checkMonitorFormat();
-    getWeather();
 
     // Získání elementů
     const SearchInputVisi = document.getElementById('SearchInputVisi');
