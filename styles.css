@@ -131,6 +131,8 @@ body {
     border-radius: 25px;
     background-color: rgb(255, 255, 255);
     box-sizing: border-box;
+    padding: 5px;
+    font-weight: bold;
 }
 
 
