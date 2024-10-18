@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Nová karta",
+    "name": "Tab-R",
     "version": "0.1",
     "description": "Toto rozšíření přizpůsobuje stránku nové karty.",
     "chrome_url_overrides": {
