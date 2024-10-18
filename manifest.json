@@ -11,8 +11,7 @@
       "resources": [
         "images/*",
         "images.json"
-      ],
-      "matches": ["<all_urls>"]
+      ]
     }
   ],
   "permissions": [
