@@ -8,10 +8,8 @@
   },
   "web_accessible_resources": [
     {
-      "resources": [
-        "images/*",
-        "images.json"
-      ]
+      "resources": ["images/*", "images.json"],
+      "matches": ["<all_urls>"]
     }
   ],
   "permissions": [
@@ -27,3 +25,4 @@
     }
   }
 }
+
