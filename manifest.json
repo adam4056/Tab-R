@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Tab-R",
   "version": "1",
-  "description": "This extension customizes the new tab page.",
+  "description": "This extension customizes the new tab.",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
@@ -16,7 +16,13 @@
     "storage"
   ],
   "icons": {
-    "48": "icon.png"
+    "48": "icons/icon.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "skrivanek@duck.com",
+      "strict_min_version": "91.0"
+    }
   }
 }
 
