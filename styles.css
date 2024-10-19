@@ -32,11 +32,10 @@ body {
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.65);
     color: black;
-    padding: 1rem;
+    padding: 0 1rem;
     box-sizing: border-box;
     text-align: left;
     font-size: 1rem;
-    padding: 0;
 }
 
 .abh2 {
@@ -61,7 +60,6 @@ body {
 #config-open {
     position: fixed;
     border: none;
-    border-color: white;
     background-color: transparent;
     bottom: 2rem;
     right: 1rem;
@@ -80,7 +78,6 @@ body {
 #author {
     position: fixed;
     border: none;
-    border-color: white;
     background-color: transparent;
     bottom: 10px;
     left: 10px;
@@ -101,26 +98,14 @@ body {
 
 #search-bar {
     display: flex;
-    flex-direction: column; /* Ponecháme vertikální uspořádání */
-    align-items: center; /* Vycentrujeme obsah horizontálně */
-    justify-content: center; /* Vycentrujeme obsah i vertikálně */
-    position: absolute; /* Posune search-bar do středu */
-    top: 50%; /* Umístí do středu stránky */
-    left: 50%; /* Umístí do středu stránky */
-    transform: translate(-50%, -50%); /* Přesune do skutečného středu */
-    z-index: 1; /* Zajistí, že se zobrazí nad ostatními prvky */
-}
-
-.select-bar {
-    text-align: center;
-    display: none; /* Bude skryto, dokud nebude potřeba */
-    background-color: white;
-    width: 23rem;
-    border: none;
-    border-radius: 0px 0px 30px 30px;
-    margin-top: 10px; /* Oddělí select-bar od inputu */
-    box-sizing: border-box;
-    margin-top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 #search-input {
@@ -129,15 +114,28 @@ body {
     height: 3.5rem;
     border: none;
     border-radius: 25px;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     box-sizing: border-box;
-    padding: 5px;
+    padding: 9px;
     font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0;
 }
 
+.select-bar {
+    text-align: center;
+    display: none;
+    background-color: white;
+    width: 23rem;
+    border: none;
+    border-radius: 0 0 30px 30px;
+    margin-top: 0px;
+    padding: 9px;
+    box-sizing: border-box;
+}
 
 .config-content {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     border: none;
     border-radius: 30px;
     width: 20rem;
@@ -172,7 +170,7 @@ button {
 .fill {
     border: none;
     border-radius: 30px;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: transparent;
     width: 25rem;
 }
 
