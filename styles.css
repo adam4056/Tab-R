@@ -6,36 +6,47 @@
 }
 
 :root {
-    --blur: rgba(255, 255, 255, 0.65);
+    --font-family: 'Rubik', sans-serif;
+    --white: white;
+    --black: black;
+    --blur-bg: rgba(255, 255, 255, 0.65);
+    --border-radius: 30px;
+    --transition-ease: 0.3s ease;
+    --font-size-small: 1rem;
+    --font-size-large: 5rem;
+    --font-size-medium: 1.7rem;
+    --padding: 1rem;
+    --fixed-bottom: 3rem;
+    --fixed-right: 5rem;
 }
 
 body {
-    background-color: black;
+    background-color: var(--black);
     background-size: cover;
     background-repeat: no-repeat;
     transition: background-image 1s ease;
-    color: white;
-    font-family: 'Rubik', sans-serif;
+    color: var(--white);
+    font-family: var(--font-family);
     margin: 0;
     text-align: center;
 }
 
 #config-card {
-    transition: 0.3s ease;
+    transition: var(--transition-ease);
     display: none;
     position: fixed;
     top: 3rem;
-    right: 5rem;
-    bottom: 3rem;
+    right: var(--fixed-right);
+    bottom: var(--fixed-bottom);
     height: auto;
     width: 20rem;
-    border-radius: 30px;
-    background-color: rgba(255, 255, 255, 0.65);
-    color: black;
-    padding: 0 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--blur-bg);
+    color: var(--black);
+    padding: 0 var(--padding);
     box-sizing: border-box;
     text-align: left;
-    font-size: 1rem;
+    font-size: var(--font-size-small);
 }
 
 .abh2 {
@@ -43,12 +54,12 @@ body {
 }
 
 #clock {
-    font-size: 5rem;
+    font-size: var(--font-size-large);
     margin-top: 10rem;
 }
 
 #date {
-    font-size: 1.7rem;
+    font-size: var(--font-size-medium);
 }
 
 .select {
@@ -81,7 +92,7 @@ body {
     background-color: transparent;
     bottom: 10px;
     left: 10px;
-    font-size: 1rem;
+    font-size: var(--font-size-small);
 }
 
 .search-icon {
@@ -89,7 +100,7 @@ body {
     height: 2.5rem;
     margin: 0;
     padding: 0;
-    transition: 0.3s ease;
+    transition: var(--transition-ease);
 }
 
 .search-icon:hover {
@@ -114,44 +125,44 @@ body {
     height: 3.5rem;
     border: none;
     border-radius: 25px;
-    background-color: white;
+    background-color: var(--white);
     box-sizing: border-box;
     padding: 9px;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: var(--font-size-small);
     margin-bottom: 0;
 }
 
 .select-bar {
     text-align: center;
     display: none;
-    background-color: white;
+    background-color: var(--white);
     width: 23rem;
     border: none;
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
     margin-top: 0;
     padding: 9px;
     box-sizing: border-box;
 }
 
 .config-content {
-    background-color: white;
+    background-color: var(--white);
     border: none;
-    border-radius: 30px;
+    border-radius: var(--border-radius);
     width: 20rem;
     position: fixed;
     top: 10rem;
-    right: 5rem;
-    bottom: 3rem;
-    padding: 1rem;
+    right: var(--fixed-right);
+    bottom: var(--fixed-bottom);
+    padding: var(--padding);
     box-sizing: border-box;
 }
 
 dialog {
     border: none;
-    border-radius: 30px;
-    background-color: var(--blur);
-    font-size: 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--blur-bg);
+    font-size: var(--font-size-small);
     position: fixed;
     box-sizing: border-box;
     top: 4rem;
@@ -160,8 +171,8 @@ dialog {
 
 button {
     border: none;
-    border-radius: 30px;
-    background-color: white;
+    border-radius: var(--border-radius);
+    background-color: var(--white);
     margin: 0.5em;
     width: auto;
     height: 2rem;
@@ -169,7 +180,7 @@ button {
 
 .fill {
     border: none;
-    border-radius: 30px;
+    border-radius: var(--border-radius);
     background-color: transparent;
     width: 25rem;
 }
@@ -178,7 +189,7 @@ button {
     position: fixed;
     right: 2rem;
     top: 2rem;
-    font-size: 1.7rem;
+    font-size: var(--font-size-medium);
     text-align: right;
 }
 
