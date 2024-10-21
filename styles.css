@@ -129,7 +129,7 @@ body {
     width: 23rem;
     border: none;
     border-radius: 0 0 30px 30px;
-    margin-top: 0px;
+    margin-top: 0;
     padding: 9px;
     box-sizing: border-box;
 }
