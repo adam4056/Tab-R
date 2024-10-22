@@ -1,7 +1,9 @@
 [
-    { "image": "images/1.jpg", "author": "Valeriia Miller" },
-    { "image": "images/3.jpg", "author": "Quino Al" },
-    { "image": "images/4.jpg", "author": "Bart Zimny" },
-    { "image": "images/7.jpg", "author": "Bob Brewer", "link": "https://unsplash.com/photos/a-very-large-iceberg-in-the-middle-of-the-ocean-24z7800UrX8" },
-    { "image": "images/9.jpg", "author": "Zhanjiang Chen", "link": "https://unsplash.com/photos/antelope-of-canyon-s8AnRSP8Xxc" }
+    { "image": "images/1-d.webp", "author": "Valeriia Miller" },
+    { "image": "images/3-d.webp", "author": "Quino Al" },
+    { "image": "images/4-d.webp", "author": "Bart Zimny" },
+    { "image": "images/10-d.webp", "author": "Daniel Seßler", "link": "https://unsplash.com/photos/an-aerial-view-of-a-mountain-and-a-body-of-water-aHQtYTNih_Q" },
+    { "image": "images/7-d.webp", "author": "Bob Brewer", "link": "https://unsplash.com/photos/a-very-large-iceberg-in-the-middle-of-the-ocean-24z7800UrX8" },
+    { "image": "images/9-d.webp", "author": "Zhanjiang Chen", "link": "https://unsplash.com/photos/antelope-of-canyon-s8AnRSP8Xxc" },
+    { "image": "images/11-d.webp", "author": "Lukas Seitz", "link": "https://unsplash.com/photos/a-view-of-a-mountain-range-at-sunset-F96pFlOpgfQ" }
 ]
