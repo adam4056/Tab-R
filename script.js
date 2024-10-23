@@ -35,16 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => console.error('Error fetching JSON:', error));
     }
 
-    function checkMonitorFormat() {
-        const dialog = document.getElementById('unsupported-monitor');
-        const aspectRatio = window.screen.width / window.screen.height;
-        if (Math.abs(aspectRatio - 16 / 9) > 0.01) dialog.showModal();
-    }
-
     function toggleSearchBar() {
-        const SearchBar = document.getElementById('search-bar');
+        const searchBar = document.getElementById('search-bar');
         const isVisible = document.getElementById('SearchInputVisi').checked;
-        SearchBar.style.display = isVisible ? 'block' : 'none';
+        searchBar.style.display = isVisible ? 'block' : 'none';
         localStorage.setItem('searchBarVisible', isVisible);
     }
 
@@ -58,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateClock, 1000);
     showDate();
     updateClock();
-    checkMonitorFormat();
 
     document.getElementById('SearchInputVisi').addEventListener('change', toggleSearchBar);
     window.onload = initializeSearchBarVisibility;
@@ -90,12 +83,4 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('config-card').style.display = 'none';
         document.getElementById('config-open').style.display = 'block';
     });
-
-    const dialog = document.getElementById('unsupported-monitor');
-    document.getElementById('unsupported-close').addEventListener('click', () => dialog.close());
-    if (dialog.open) {
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter') dialog.close();
-        });
-    }
 });
