@@ -16,3 +16,7 @@
 ## Description
 
 Tab-R is a browser extension that transforms your new tab experience. It replaces the boring default tab with beautiful nature wallpapers, making your browsing more enjoyable. The extension also provides access to multiple search engines, allowing you to quickly find what you need. Plus, it features a convenient date display, so you always know what day it is. With Tab-R, you can personalize your browsing experience while staying organized and inspired.
+
+## Compatibility
+
+The extension is compatible with all Chromium-based browsers (such as Chrome, Brave, and Edge) as well as all Firefox-based browsers (including Firefox, Waterfox, and Zen).
