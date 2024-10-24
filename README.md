@@ -25,3 +25,6 @@ The extension is compatible with all Chromium-based browsers (such as Chrome, Br
 
 ### For FireFox
 You can install it for Firefox using the Firefox Add-on Store at this [link](https://addons.mozilla.org/cs/firefox/addon/tab-r/).
+
+### For chrome and chromium based browsers
+For installation, read the [chromium installation guide](./chromium-install.md).
