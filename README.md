@@ -1,6 +1,6 @@
 # Tab-R Extension
 
-https://img.shields.io/badge/version-1.3-blue.svg  [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+[![Version](https://img.shields.io/badge/version-1.3-blue.svg)](https://github.com/adam4056/Tab-R/releases)  [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 ## Features
 
