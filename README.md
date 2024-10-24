@@ -28,3 +28,12 @@ You can install it for Firefox using the Firefox Add-on Store at this [link](htt
 
 ### For chrome and chromium based browsers
 For installation, read the [chromium installation guide](./chromium-install.md).
+
+## License
+
+- **This project**
+  -  This project is licensed under the [MIT license](./LICENSE).
+- **Taler Icons**
+  - This project uses Tabler Icons by Paweł Kuna, which are licensed under the [MIT license](./license/tabler/license.txt).
+- **Rubik Font**
+  - This project uses the Rubik font, which is licensed under the [SIL Open Font License, Version 1.1](./license/rubik/OFL.txt). 
