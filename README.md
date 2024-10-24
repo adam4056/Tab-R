@@ -1,4 +1,4 @@
-# Tab-R Extension
+# Tab-R
 
 [![Version](https://img.shields.io/badge/version-1.3-blue.svg)](https://github.com/adam4056/Tab-R/releases)  [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
@@ -15,4 +15,4 @@
 
 ## Description
 
-Tab-R is a lightweight browser extension designed to enhance your new tab experience. Replace the plain default tab with a dynamic page that features beautiful, high-quality nature wallpapers. The extension also allows you to choose from multiple search engines, making it easier and faster to search the web. Additionally, a date display is included, ensuring you always have a handy reminder of today's date. Elevate your browsing experience with a more visually appealing and functional new tab!
+Tab-R is a browser extension that transforms your new tab experience. It replaces the boring default tab with beautiful nature wallpapers, making your browsing more enjoyable. The extension also provides access to multiple search engines, allowing you to quickly find what you need. Plus, it features a convenient date display, so you always know what day it is. With Tab-R, you can personalize your browsing experience while staying organized and inspired.
