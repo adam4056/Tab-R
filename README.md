@@ -20,3 +20,8 @@ Tab-R is a browser extension that transforms your new tab experience. It replace
 ## Compatibility
 
 The extension is compatible with all Chromium-based browsers (such as Chrome, Brave, and Edge) as well as all Firefox-based browsers (including Firefox, Waterfox, and Zen).
+
+## Installation
+
+### For FireFox
+You can install it for Firefox using the Firefox Add-on Store at this [link](https://addons.mozilla.org/cs/firefox/addon/tab-r/).
