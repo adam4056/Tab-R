@@ -7,3 +7,4 @@
 zip -r archiv.zip . -x "*.md" ".vscode/*" "LICENSE" "*.sh" ".git/*"
 
 echo "Archiv byl úspěšně vytvořen jako archiv.zip."
+##
