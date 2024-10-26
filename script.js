@@ -48,13 +48,54 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('search-bar').style.display = isVisible ? 'block' : 'none';
     }
 
+    function executeSearch(text) {
+        const storedChoice = localStorage.getItem('searchChoice') || 'google'; // Default to google if not set
+        const selectedChoice = document.querySelector('input[name="search"]:checked') || document.querySelector(`input[value="${storedChoice}"]`);
+
+        if (selectedChoice) {
+            const choiceValue = selectedChoice.value;
+            localStorage.setItem('searchChoice', choiceValue);
+
+            const searchUrls = {
+                google: `https://www.google.com/search?q=${encodeURIComponent(text)}`,
+                brave: `https://search.brave.com/search?q=${encodeURIComponent(text)}`,
+                duckduckgo: `https://duckduckgo.com/?q=${encodeURIComponent(text)}`,
+                bing: `https://www.bing.com/search?q=${encodeURIComponent(text)}`,
+                wikipedia: `https://en.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(text)}`
+            };
+            if (searchUrls[choiceValue]) {
+                window.location.href = searchUrls[choiceValue];
+            }
+        }
+    }
+
+    // Initialize search bar visibility
+    initializeSearchBarVisibility();
+
+    // Set the default choice for search
+    const storedChoice = localStorage.getItem('searchChoice');
+    if (!storedChoice) {
+        localStorage.setItem('searchChoice', 'google'); // Set default to Google
+    }
+
     changeBackground();
     setInterval(updateClock, 1000);
     showDate();
     updateClock();
 
+    // Ensure the correct radio button is checked on page load
+    const selectedChoice = localStorage.getItem('searchChoice');
+    if (selectedChoice) {
+        const radioButton = document.querySelector(`input[value="${selectedChoice}"]`);
+        if (radioButton) {
+            radioButton.checked = true; // Set the corresponding radio button as checked
+        }
+    } else {
+        document.querySelector('input[value="google"]').checked = true; // Explicitly set Google as checked if no choice
+    }
+
+    // Event listeners
     document.getElementById('SearchInputVisi').addEventListener('change', toggleSearchBar);
-    window.onload = initializeSearchBarVisibility;
 
     document.querySelectorAll(".select").forEach(button => {
         button.addEventListener("click", () => performSearch(button.id.replace('-button', '')));
@@ -62,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const searchInput = document.getElementById("search-input");
     searchInput.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") performSearch(document.querySelectorAll(".select")[0].id.replace('-button', ''));
+        if (event.key === "Enter") executeSearch(searchInput.value);
     });
 
     searchInput.addEventListener('input', function () {
@@ -71,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
             element.textContent = searchInput.value.length > 40 ? `${searchInput.value.substring(0, 37)}...` : searchInput.value;
         });
         document.querySelector('.select-bar').style.display = truncatedText ? 'flex' : 'none';
-        searchInput.style.borderRadius = truncatedText ? '30px 30px 0 0' : '30px';
     });
 
     document.getElementById('config-open').addEventListener('click', () => {
