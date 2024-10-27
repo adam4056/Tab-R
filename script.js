@@ -106,6 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.key === "Enter") executeSearch(searchInput.value);
     });
 
+    const searchButton = document.getElementById("search-button");
+    searchButton.addEventListener("click", (event) => {
+        executeSearch(searchInput.value);
+    }); 
+
     searchInput.addEventListener('input', function () {
         const truncatedText = searchInput.value.trim().length > 0;
         document.querySelectorAll('.search-text').forEach(element => {
