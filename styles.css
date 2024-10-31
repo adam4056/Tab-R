@@ -55,7 +55,7 @@ body {
 
 #clock {
     font-size: var(--font-size-large);
-    margin-top: 10rem;
+    margin-top: 13rem;
 }
 
 #date {
@@ -115,7 +115,6 @@ body {
 .search-container {
     display: flex;
     align-items: center;
-    /* Align items vertically in the center */
 }
 
 #search-input {
@@ -130,16 +129,12 @@ body {
     font-weight: bold;
     font-size: var(--font-size-small);
     margin-right: 0.5rem;
-    /* Space between input and icon */
 }
 
 .search-icon-background {
     display: flex;
-    /* Use flexbox to center the icon */
     justify-content: center;
-    /* Center horizontally */
     align-items: center;
-    /* Center vertically */
     background-color: var(--white);
     height: 3.5rem;
     width: 3.5rem;
@@ -162,7 +157,6 @@ body {
     background-color: transparent;
     margin: 0;
 }
-
 
 .select-bar {
     text-align: center;

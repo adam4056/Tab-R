@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showDate() {
         const now = new Date();
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        document.getElementById("date").textContent = `${String(now.getDate()).padStart(2, '0')} ${months[now.getMonth()]}`;
+        document.getElementById("date").textContent = `${String(now.getDate()).padStart(2, '0')}. ${months[now.getMonth()]}`;
     }
 
     function changeBackground() {
@@ -43,19 +43,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function initializeSearchBarVisibility() {
-        const isVisible = localStorage.getItem('searchBarVisible') === 'true';
+        const isVisible = localStorage.getItem('searchBarVisible') === 'true' || localStorage.getItem('searchBarVisible') === null;
         document.getElementById('SearchInputVisi').checked = isVisible;
         document.getElementById('search-bar').style.display = isVisible ? 'block' : 'none';
     }
 
     function executeSearch(text) {
-        const storedChoice = localStorage.getItem('searchChoice') || 'google'; // Default to google if not set
+        const storedChoice = localStorage.getItem('searchChoice') || 'google';
         const selectedChoice = document.querySelector('input[name="search"]:checked') || document.querySelector(`input[value="${storedChoice}"]`);
-
         if (selectedChoice) {
             const choiceValue = selectedChoice.value;
             localStorage.setItem('searchChoice', choiceValue);
-
             const searchUrls = {
                 google: `https://www.google.com/search?q=${encodeURIComponent(text)}`,
                 brave: `https://search.brave.com/search?q=${encodeURIComponent(text)}`,
@@ -69,13 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Initialize search bar visibility
     initializeSearchBarVisibility();
-
-    // Set the default choice for search
     const storedChoice = localStorage.getItem('searchChoice');
     if (!storedChoice) {
-        localStorage.setItem('searchChoice', 'google'); // Set default to Google
+        localStorage.setItem('searchChoice', 'google');
     }
 
     changeBackground();
@@ -83,18 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
     showDate();
     updateClock();
 
-    // Ensure the correct radio button is checked on page load
     const selectedChoice = localStorage.getItem('searchChoice');
     if (selectedChoice) {
         const radioButton = document.querySelector(`input[value="${selectedChoice}"]`);
         if (radioButton) {
-            radioButton.checked = true; // Set the corresponding radio button as checked
+            radioButton.checked = true;
         }
     } else {
-        document.querySelector('input[value="google"]').checked = true; // Explicitly set Google as checked if no choice
+        document.querySelector('input[value="google"]').checked = true;
     }
 
-    // Event listeners
     document.getElementById('SearchInputVisi').addEventListener('change', toggleSearchBar);
 
     document.querySelectorAll(".select").forEach(button => {
@@ -109,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchButton = document.getElementById("search-button");
     searchButton.addEventListener("click", (event) => {
         executeSearch(searchInput.value);
-    }); 
+    });
 
     searchInput.addEventListener('input', function () {
         const truncatedText = searchInput.value.trim().length > 0;
