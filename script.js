@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showDate() {
         const now = new Date();
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        document.getElementById("date").textContent = `${String(now.getDate()).padStart(2, '0')}. ${months[now.getMonth()]}`;
+        document.getElementById("date").textContent = `${String(now.getDate()).padStart(2, '0')} ${months[now.getMonth()]}`;
     }
 
     function changeBackground() {
