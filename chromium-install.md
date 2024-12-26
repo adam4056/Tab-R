@@ -1,7 +1,7 @@
 # How to install in chromium browsers
 
 1. **Download the ZIP file**
-   - Download the extension ZIP from this [link](https://github.com/adam4056/Tab-R/releases/tag/Chrome) and save it.
+   - Download the extension ZIP from this [link](https://github.com/adam4056/Tab-R/releases/) and save it.
 
 2. **Extract the ZIP**
    - Unzip the file to a folder on your computer.
