@@ -3,8 +3,8 @@
   
   Tab-R
 
-  <img src="https://img.shields.io/badge/version-1.4-blue.svg" alt="Version Badge">
-  <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License Badge">
+[![Version](https://img.shields.io/badge/version-1.4-blue.svg)](https://github.com/adam4056/Tab-R/releases)  [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE) ![Last Commit](https://img.shields.io/github/last-commit/adam4056/Tab-R)
+  
 </h1>
 
 
