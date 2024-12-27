@@ -1,9 +1,15 @@
-# Tab-R
+<h1 align="center">
+  <img src="https://i.ibb.co/dGzh4Bw/icon-tabr.png" alt="icon-tabr" border="0" width="150">
+  
+  Tab-R
 
-[![Version](https://img.shields.io/badge/version-1.4-blue.svg)](https://github.com/adam4056/Tab-R/releases)  [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+  <img src="https://img.shields.io/badge/version-1.4-blue.svg" alt="Version Badge">
+  <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License Badge">
+</h1>
 
+
+  
 ## Features
-
 - 🌄 **Beautiful Nature Wallpapers**  
   Enjoy stunning and refreshing nature-themed backgrounds on every new tab you open.
 
