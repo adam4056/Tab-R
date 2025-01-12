@@ -25,7 +25,7 @@ Tab-R is a browser extension that transforms your new tab experience. It replace
 
 ## Demo
 
-You can try Tab-R [here](https://adam4056.github.io/Tab-R/) 
+You can try Tab-R [here](https://adam4056.github.io/Tab-R/).
 
 ## Compatibility
 
