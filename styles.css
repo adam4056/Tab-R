@@ -12,9 +12,9 @@
     --blur-bg: rgba(255, 255, 255, 0.65);
     --border-radius: 30px;
     --transition-ease: 0.3s ease;
-    --font-size-small: 1rem;
-    --font-size-large: 5rem;
-    --font-size-medium: 1.7rem;
+    --font-size-small: clamp(0.8rem, 1vw, 1.2rem);
+    --font-size-medium: clamp(1.5rem, 2vw, 2rem);
+    --font-size-large: clamp(3rem, 8vw, 5rem);
     --padding: 1rem;
     --fixed-bottom: 3rem;
     --fixed-right: 5rem;
@@ -55,7 +55,7 @@ body {
 
 #clock {
     font-size: var(--font-size-large);
-    margin-top: 13rem;
+    margin-top: 13vh;
 }
 
 #date {
@@ -118,33 +118,32 @@ body {
 }
 
 #search-input {
-    outline: none;
-    width: 27rem;
-    height: 3.5rem;
-    border: none;
-    border-radius: var(--border-radius);
-    background-color: var(--white);
-    box-sizing: border-box;
-    padding: 9px;
-    font-weight: bold;
-    font-size: var(--font-size-small);
-    margin-right: 0.5rem;
+    width: clamp(15rem, 75%, 35rem); /* Minimální šířka 15rem, maximální 30rem, jinak 50% šířky rodiče */
+    height: clamp(2rem, 5vw, 3.5rem); /* Výška závislá na viewportu */
+    padding: 0.5rem; /* Vnitřní odsazení pro větší pohodlí */
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem); /* Velikost textu dynamicky */
+    border: 2px solid var(--black); /* Přidání rámečku */
+    border-radius: var(--border-radius); /* Zaoblení */
+    background-color: var(--white); /* Barva pozadí */
+    color: var(--black); /* Barva textu */
+    box-sizing: border-box; /* Zahrnutí paddingu do výpočtu velikosti */
 }
+
 
 .search-icon-background {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--white);
-    height: 3.5rem;
-    width: 3.5rem;
+    height: clamp(2.5rem, 5vw, 3.5rem);
+    width: clamp(2.5rem, 5vw, 3.5rem);
     border: none;
     border-radius: 150px;
 }
 
 .search-icon {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: clamp(1rem, 2vw, 1.5rem);
+    height: clamp(1rem, 2vw, 1.5rem);
     margin: 0;
     padding-top: 2px;
     transition: var(--transition-ease);
@@ -193,22 +192,6 @@ dialog {
     margin-bottom: 2rem;
 }
 
-#config-open {
-    border: none;
-    border-radius: var(--border-radius);
-    background-color: transparent;
-    margin: 0.5em;
-    width: auto;
-    height: 2rem;
-}
-
-.fill {
-    border: none;
-    border-radius: var(--border-radius);
-    background-color: transparent;
-    width: 25rem;
-}
-
 #weather {
     position: fixed;
     right: 2rem;
@@ -233,72 +216,4 @@ h2 {
 
 .input-radio {
     display: block;
-}
-
-#SearchInputVisi {
-    width: 50px;
-    height: 25px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: #ccc;
-    border-radius: 25px;
-    position: relative;
-    outline: none;
-    cursor: pointer;
-    transition: background-color 0.4s;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-#SearchInputVisi::before {
-    content: "";
-    position: absolute;
-    width: 19px;
-    height: 19px;
-    top: 3px;
-    left: 3px;
-    background-color: white;
-    border-radius: 50%;
-    transition: transform 0.4s;
-}
-
-#SearchInputVisi:checked {
-    background-color: rgb(0, 145, 202);
-}
-
-#SearchInputVisi:checked::before {
-    transform: translateX(25px);
-}
-
-input[type="radio"] {
-    appearance: none;
-    -webkit-appearance: none;
-    border: none;
-    border-radius: 50%;
-    background-color: rgb(224, 224, 224);
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 5px;
-    display: inline-block;
-}
-
-input[type="radio"]:checked {
-    border: none;
-    background-color: rgb(0, 145, 202);
-    position: relative;
-}
-
-input[type="radio"]:checked::after {
-    content: '';
-    display: block;
-    width: 8px;
-    height: 8px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
