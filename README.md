@@ -11,13 +11,19 @@
   
 ## Features
 - 🌄 **Beautiful Nature Wallpapers**  
-  Enjoy stunning and refreshing nature-themed backgrounds on every new tab you open.
+  Enjoy stunning and refreshing nature-themed backgrounds on every new tab you open.  
 
 - 🔍 **Multiple Search Engines**  
-  Quickly search the web with a selection of different search engines, including Google, Bing, DuckDuckGo, and more.
+  Quickly search the web with a selection of different search engines, including Google, Bing, DuckDuckGo, and more.  
 
 - 📅 **Date Display**  
-  Stay organized with the current date always visible on your new tab screen.
+  Stay organized with the current date always visible on your new tab screen.  
+
+- 🔓 **Privacy**  
+  The extension does not collect any personal user data.  
+
+- 📡 **Fully Local**  
+  Works entirely offline and does not require an internet connection to function.  
 
 ## Description
 
