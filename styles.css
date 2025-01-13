@@ -302,3 +302,13 @@ input[type="radio"]:checked::after {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(73, 73, 73);
+}
