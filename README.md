@@ -39,6 +39,10 @@ You can install it for Firefox using the Firefox Add-on Store at this [link](htt
 ### For chrome and chromium based browsers
 For installation, read the [chromium installation guide](./chromium-install.md).
 
+## Declaration on AI Inclusion
+
+This project will not include AI unless it provides clear and meaningful value. AI will only be used when it makes sense and is truly needed.
+
 ## License
 
 - **This project**
