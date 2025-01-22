@@ -126,6 +126,7 @@ body {
     background-color: var(--white);
     box-sizing: border-box;
     padding: 9px;
+    font-family: sans-serif;
     font-weight: bold;
     font-size: var(--font-size-small);
     margin-right: 0.5rem;
