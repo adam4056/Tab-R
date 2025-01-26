@@ -23,13 +23,16 @@
 body {
     background-color: var(--black);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     transition: background-image 1s ease;
     color: var(--white);
     font-family: var(--font-family);
     margin: 0;
     text-align: center;
 }
+
 
 #config-card {
     transition: var(--transition-ease);
