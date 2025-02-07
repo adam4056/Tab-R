@@ -1,8 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
     function updateClock() {
+        const usTimeFormatCheckBox = document.getElementById('usTimeFormat');
         const clockElement = document.getElementById('clock');
         const now = new Date();
-        clockElement.textContent = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+    
+        if (usTimeFormatCheckBox.checked) {
+            let hours = now.getHours();
+            let amPm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12 || 12;
+            clockElement.textContent = `${String(hours).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')} ${amPm}`;
+        } else {
+            clockElement.textContent = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+        }
+    
+        localStorage.setItem('timeFormat12h', usTimeFormatCheckBox.checked);
+    }
+    
+    function loadTimeFormat() {
+        const usTimeFormatCheckBox = document.getElementById('usTimeFormat');
+        const savedFormat = localStorage.getItem('timeFormat12h');
+    
+        if (savedFormat !== null) {
+            usTimeFormatCheckBox.checked = savedFormat === 'true';
+        }
+    
+        updateClock();
     }
 
     function performSearch(engine) {
@@ -121,4 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('config-card').style.display = 'none';
         document.getElementById('config-open').style.display = 'block';
     });
+
+    document.getElementById('usTimeFormat').addEventListener('change', updateClock);
 });
