@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
             let amPm = hours >= 12 ? 'PM' : 'AM';
             hours = hours % 12 || 12;
 
-            // Použití innerHTML pro vložení div s AM/PM
             clockElement.innerHTML = `${String(hours).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')} <div class="am-pm">${amPm}</div>`;
         } else {
             clockElement.textContent = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
