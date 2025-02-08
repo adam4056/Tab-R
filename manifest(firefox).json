@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Tab-R",
-  "version": "1.4",
+  "version": "1.6",
   "description": "This extension customizes the new tab.",
   "chrome_url_overrides": {
     "newtab": "index.html"
