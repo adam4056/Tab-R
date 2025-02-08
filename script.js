@@ -1,32 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-function updateClock() {
-    const usTimeFormatCheckBox = document.getElementById('usTimeFormat');
-    const clockElement = document.getElementById('clock');
-    const now = new Date();
+    function updateClock() {
+        const usTimeFormatCheckBox = document.getElementById('usTimeFormat');
+        const clockElement = document.getElementById('clock');
+        const now = new Date();
 
-    if (usTimeFormatCheckBox.checked) {
-        let hours = now.getHours();
-        let amPm = hours >= 12 ? 'PM' : 'AM';
-        hours = hours % 12 || 12;
+        if (usTimeFormatCheckBox.checked) {
+            let hours = now.getHours();
+            let amPm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12 || 12;
 
-        // Použití innerHTML pro vložení div s AM/PM
-        clockElement.innerHTML = `${String(hours).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')} <div class="am-pm">${amPm}</div>`;
-    } else {
-        clockElement.textContent = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+            // Použití innerHTML pro vložení div s AM/PM
+            clockElement.innerHTML = `${String(hours).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')} <div class="am-pm">${amPm}</div>`;
+        } else {
+            clockElement.textContent = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+        }
+
+        localStorage.setItem('timeFormat12h', usTimeFormatCheckBox.checked);
     }
 
-    localStorage.setItem('timeFormat12h', usTimeFormatCheckBox.checked);
-}
 
-    
     function loadTimeFormat() {
         const usTimeFormatCheckBox = document.getElementById('usTimeFormat');
         const savedFormat = localStorage.getItem('timeFormat12h');
-    
+
         if (savedFormat !== null) {
             usTimeFormatCheckBox.checked = savedFormat === 'true';
         }
-    
+
         updateClock();
     }
 
