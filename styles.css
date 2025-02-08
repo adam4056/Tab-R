@@ -316,3 +316,8 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.am-pm {
+    display: inline;
+    font-size: 50%;
+}
